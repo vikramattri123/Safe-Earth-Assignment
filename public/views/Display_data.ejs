@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+.space
+{
+text-align:center;
+  width: 720px;
+  padding: 20px;
+  border: 1px solid black;
+  margin-top:70px;
+  margin-left:420px;
+}
+</style>
+</head>
+<body>
+<div class="space">
+<div class="row">
+<h1>Employee Info</h1><br>
+<table border="1px" >
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Task_Name</th>
+      <th>Project_Name</th>
+      <th>Start_Time</th>
+      <th>End_Time</th>
+    </tr>
+    <% if(records.length>0) {%>
+    <%  records.forEach(function(row){%>
+    <tr>
+      <td><%= row.Name%></td>
+      <td><%= row.Username%></td>
+      <td><%= row.Email%></td>
+      <td><%= row.Task_Name%></td>
+      <td><%= row.Project_Name%></td>
+      <td><%= row.Start_Time%></td>
+      <td><%= row.End_Time%></td>
+    </tr>
+    <%})}%>
+  </table>
+</div>
+</div>
+</body>
+</html>
